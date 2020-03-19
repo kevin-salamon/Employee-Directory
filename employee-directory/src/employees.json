@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "firstname": "Kevin",
+        "lastname": "Salamon",
+        "role": "CEO"
+    },
+    {
+        "id": 2,
+        "firstname": "Kimia",
+        "lastname": "Darden",
+        "role": "CTO"
+    },
+    {
+        "id": 3,
+        "firstname": "Justin",
+        "lastname": "Lin",
+        "role": "Rocket Scientist"
+    },
+    {
+        "id": 4,
+        "firstname": "Tristan",
+        "lastname": "Raes",
+        "role": "Salesman"
+    },
+    {
+        "id": 5,
+        "firstname": "Ryan",
+        "lastname": "Salamon",
+        "role": "Salesman"
+    },
+    {
+        "id": 6,
+        "firstname": "Michael",
+        "lastname": "Reilly",
+        "role": "Engineer"
+    }
+  ]
