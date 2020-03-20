@@ -33,8 +33,7 @@ class Table extends React.Component {
 
       <div className="container">
         <div className="row">
-          <div className="col-sm-4 column-styling">
-            <label for="sort-methods">Sort</label>
+          <div className="col-sm-6 column-styling text-center">
             <select id="sort-methods">
               <option value="id">Sort by ID</option>
               <option value="lastName">Sort by Last Name</option>
@@ -42,17 +41,13 @@ class Table extends React.Component {
             </select>
             <button className="btn btn-primary small-button text-center" onClick={this.sortByChoice}>Sort</button>
           </div>
-          <div className="col-sm-4 column-styling">
-            <label for="filter-methods">Filter</label>
+          <div className="col-sm-6 column-styling text-center">
             <select id="filter-methods">
               <option value="Salesman">Filter to Salesmen</option>
               <option value="Manager">Filter to Managers</option>
               <option value="Engineer">Filter to Engineers</option>
             </select>
             <button className="btn btn-primary small-button text-center" onClick={this.filterByRole}>Filter</button>
-          </div>
-          <div className="col-sm-4 column-styling">
-            <button className="btn btn-primary large-button" onClick={this.resetTable}>Reset Table</button>
           </div>
         </div>
         <div className="row">
@@ -74,6 +69,11 @@ class Table extends React.Component {
                 </tr>)
               }
             </table>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-12 column-styling reset-column">
+            <button className="btn btn-primary large-button text-center" onClick={this.resetTable}>Reset Table</button>
           </div>
         </div>
       </div>

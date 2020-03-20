@@ -27,22 +27,31 @@ body {
 }
 
 button {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Righteous', cursive;
     font-size: 30px;
     font-weight: bolder;
     border: 2px solid black;
 }
 
+select {
+    width: 170px;
+    height: 30px;
+    font-family: 'Righteous', cursive;
+}
+
 .small-button {
-    width: 70px;
+    width: 150px;
     height: 30px;
     margin-left: 1%;
+    margin-bottom: 1%;
+    font-size: 15px;
 }
 
 .large-button {
     width: 200px;
     height: 50px;
-    margin-left: 20%;
+    margin-left: 42%;
+    margin-top: 25px;
 }
 
 table {
