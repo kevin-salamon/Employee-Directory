@@ -3,19 +3,19 @@
         "id": 1,
         "firstname": "Kevin",
         "lastname": "Salamon",
-        "role": "CEO"
+        "role": "Manager"
     },
     {
         "id": 2,
         "firstname": "Kimia",
         "lastname": "Darden",
-        "role": "CTO"
+        "role": "Manager"
     },
     {
         "id": 3,
         "firstname": "Justin",
         "lastname": "Lin",
-        "role": "Rocket Scientist"
+        "role": "Engineer"
     },
     {
         "id": 4,
