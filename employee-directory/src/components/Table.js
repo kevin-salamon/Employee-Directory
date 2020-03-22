@@ -5,8 +5,7 @@ import "./style.css"
 class Table extends React.Component {
 
   state = {
-    employeesState: employees,
-    fllterChoice: ""
+    employeesState: employees
   }
 
   sortName = (arr) => {
@@ -21,9 +20,16 @@ class Table extends React.Component {
     this.setState({ employeesState: this.sortName(employees)});
   }
 
-  filterByRole = () => {
-    let choice = "Manager"; //this will become the role/position that will be filtered from id="filter-methods" val()
-    this.setState({ employeesState: employees.filter(employee => employee.role === choice)});
+  filterByManager = () => {
+    this.setState({ employeesState: employees.filter(employee => employee.role === "Manager")});
+  }
+
+  filterByEngineer = () => {
+    this.setState({ employeesState: employees.filter(employee => employee.role === "Engineer")});
+  }
+
+  filterBySalesman = () => {
+    this.setState({ employeesState: employees.filter(employee => employee.role === "Salesman")});
   }
 
   resetTable = () => {
@@ -43,12 +49,17 @@ class Table extends React.Component {
             <button className="btn btn-primary long-button text-center" onClick={this.sortByName}>Sort by Last Name</button>
           </div>
           <div className="col-sm-6 column-styling text-center">
-            <select id="filter-methods">
-              <option value="Salesman">Filter to Salesmen</option>
-              <option value="Manager">Filter to Managers</option>
-              <option value="Engineer">Filter to Engineers</option>
-            </select>
-            <button className="btn btn-primary small-button text-center" onClick={this.filterByRole}>Filter</button>
+            <div className="row">
+              <div className="col-sm-4">
+                <button className="btn btn-primary small-button text-center" onClick={this.filterByManager}>Filter to Managers</button>
+              </div>
+              <div className="col-sm-4">
+                <button className="btn btn-primary small-button text-center" onClick={this.filterByEngineer}>Filter to Engineers</button>
+              </div>
+              <div className="col-sm-4">
+                <button className="btn btn-primary small-button text-center" onClick={this.filterBySalesman}>Filter to Salesmen</button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="row">
