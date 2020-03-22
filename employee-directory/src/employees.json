@@ -3,36 +3,42 @@
         "id": 1,
         "firstname": "Kevin",
         "lastname": "Salamon",
-        "role": "Manager"
+        "role": "Manager",
+        "email": "theksalamon@gmail.com"
     },
     {
         "id": 2,
         "firstname": "Kimia",
         "lastname": "Darden",
-        "role": "Manager"
+        "role": "Manager",
+        "email": "kimiadarden1020@gmail.com"
     },
     {
         "id": 3,
         "firstname": "Justin",
         "lastname": "Lin",
-        "role": "Engineer"
+        "role": "Engineer",
+        "email": "justinlin@gmail.com"
     },
     {
         "id": 4,
         "firstname": "Tristan",
         "lastname": "Raes",
-        "role": "Salesman"
+        "role": "Salesman",
+        "email": "tristanr50@gmail.com"
     },
     {
         "id": 5,
         "firstname": "Ryan",
         "lastname": "Salamon",
-        "role": "Salesman"
+        "role": "Salesman",
+        "email": "rjsalamon@gmail.com"
     },
     {
         "id": 6,
         "firstname": "Michael",
         "lastname": "Reilly",
-        "role": "Engineer"
+        "role": "Engineer",
+        "email": "mikerei20@gmail.com"
     }
   ]

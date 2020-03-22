@@ -70,6 +70,7 @@ class Table extends React.Component {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Position</th>
+                <th>Email</th>
               </tr>
               {
                 this.state.employeesState.map((employee) =>
@@ -78,6 +79,7 @@ class Table extends React.Component {
                   <td>{employee.firstname}</td>
                   <td>{employee.lastname}</td>
                   <td>{employee.role}</td>
+                  <td>{employee.email}</td>
                 </tr>)
               }
             </table>
