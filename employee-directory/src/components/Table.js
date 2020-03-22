@@ -5,23 +5,29 @@ import "./style.css"
 class Table extends React.Component {
 
   state = {
-    sortChoice: "",
-    filterChoice: ""
+    employeesState: employees,
+    fllterChoice: ""
   }
 
-  sortByChoice = () => {
-    let choice = ""; // this will become the choice for sorting from id="sort-methods" val()
-    this.setState({sortChoice: ""});
+  sortName = (arr) => {
+    return arr.sort((a, b) => a.lastname > b.lastname ? 1 : -1);
+  }
+
+  sortReset = (arr) => {
+    return arr.sort((a, b) => a.id > b.id ? 1 : -1);
+  }
+
+  sortByName = () => {
+    this.setState({ employeesState: this.sortName(employees)});
   }
 
   filterByRole = () => {
-    let choice = ""; //this will become the role/position that will be filtered from id="filter-methods" val()
-    this.setState({filterChoice: ""});
-    employees.filter(employee => employee.role === choice);
+    let choice = "Manager"; //this will become the role/position that will be filtered from id="filter-methods" val()
+    this.setState({ employeesState: employees.filter(employee => employee.role === choice)});
   }
 
   resetTable = () => {
-    //should reset the table to normal, no filtering or sorting
+    this.setState({ employeesState: this.sortReset(employees) })
   }
 
   render() {
@@ -34,12 +40,7 @@ class Table extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-6 column-styling text-center">
-            <select id="sort-methods">
-              <option value="id">Sort by ID</option>
-              <option value="lastName">Sort by Last Name</option>
-              <option value="role">Sort by Position</option>
-            </select>
-            <button className="btn btn-primary small-button text-center" onClick={this.sortByChoice}>Sort</button>
+            <button className="btn btn-primary long-button text-center" onClick={this.sortByName}>Sort by Last Name</button>
           </div>
           <div className="col-sm-6 column-styling text-center">
             <select id="filter-methods">
@@ -60,7 +61,7 @@ class Table extends React.Component {
                 <th>Position</th>
               </tr>
               {
-                employees.map((employee) =>
+                this.state.employeesState.map((employee) =>
                 <tr>
                   <td>{employee.id}</td>
                   <td>{employee.firstname}</td>
@@ -85,3 +86,6 @@ class Table extends React.Component {
 }
 
 export default Table;
+
+// make a function that says "okay run render where x = the sort/filter function with proper arg"
+// or make many functions that each have their specific render and make a wrapper function which calls them based on the input of the sort/filter function (x = this thing)
